@@ -6,35 +6,44 @@ const venueImages = [
   {
     title: "Elegant Weddings",
     subtitle: "Your dream day, perfectly styled",
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&h=600&fit=crop",
+    image: "/manus-storage/venue_hero_1_fed029b5.png",
   },
   {
     title: "Garden Celebrations",
     subtitle: "Outdoor elegance and natural beauty",
-    image: "https://images.unsplash.com/photo-1519671482677-36034494c7ad?w=1200https://images.unsplash.com/photo-1519167758481-83f19106c8f3?w=1200&h=600&fit=croph=600https://images.unsplash.com/photo-1519167758481-83f19106c8f3?w=1200&h=600&fit=cropfit=crop",
+    image: "/manus-storage/venue_hero_2_343d8e24.jpeg",
   },
   {
     title: "Intimate Gatherings",
     subtitle: "Personal touches, lasting memories",
-    image: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=1200https://images.unsplash.com/photo-1530519387789-4c1017266635?w=1200&h=600&fit=croph=600https://images.unsplash.com/photo-1530519387789-4c1017266635?w=1200&h=600&fit=cropfit=crop",
+    image: "/manus-storage/venue_setup_3_71c6a60e.jpeg",
   },
   {
     title: "Grand Celebrations",
     subtitle: "Spectacular events, unforgettable nights",
-    image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&h=600&fit=crop",
+    image: "/manus-storage/venue_setup_4_cc6beed7.jpeg",
   },
   {
     title: "Luxury Receptions",
     subtitle: "Premium service, exceptional details",
-    image: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=1200&h=600&fit=crop",
+    image: "/manus-storage/venue_setup_5_eeb36ecb.jpeg",
   },
+];
+
+const galleryImages = [
+  "/manus-storage/venue_setup_3_71c6a60e.jpeg",
+  "/manus-storage/venue_setup_4_cc6beed7.jpeg",
+  "/manus-storage/venue_setup_5_eeb36ecb.jpeg",
+  "/manus-storage/venue_setup_6_7a676f6b.jpeg",
+  "/manus-storage/venue_hero_1_fed029b5.png",
+  "/manus-storage/venue_hero_2_343d8e24.jpeg",
 ];
 
 const serviceCategories = [
   {
     title: "Weddings & Engagements",
     description: "Complete wedding rental services with elegant styling",
-    color: "from-[#E63946] to-[#C63946]",
+    color: "from-[#E0BFB8] to-[#D4A5A0]",
     icon: RingIcon,
   },
   {
@@ -46,7 +55,7 @@ const serviceCategories = [
   {
     title: "Linens & Textiles",
     description: "Premium fabrics and linens in all colors",
-    color: "from-[#E63946] to-[#C63946]",
+    color: "from-[#E0BFB8] to-[#D4A5A0]",
     icon: TableIcon,
   },
   {
@@ -59,11 +68,11 @@ const serviceCategories = [
 
 const productCategories = [
   { name: "Seating", icon: TableIcon, color: "#E0BFB8" },
-  { name: "Tables", icon: TableIcon, color: "#E63946" },
+  { name: "Tables", icon: TableIcon, color: "#E0BFB8" },
   { name: "Glassware", icon: GlassIcon, color: "#E0BFB8" },
-  { name: "Decor", icon: DecorIcon, color: "#E63946" },
+  { name: "Decor", icon: DecorIcon, color: "#E0BFB8" },
   { name: "Linens", icon: FlowerIcon, color: "#E0BFB8" },
-  { name: "Lighting", icon: CakeIcon, color: "#E63946" },
+  { name: "Lighting", icon: CakeIcon, color: "#E0BFB8" },
 ];
 
 export default function Home() {
@@ -105,10 +114,10 @@ export default function Home() {
                   {image.subtitle}
                 </p>
                 <div className="flex gap-4">
-                  <button className="px-8 py-3 bg-[#E63946] hover:bg-[#D63946] text-white font-semibold rounded transition">
+                  <button className="px-8 py-3 bg-[#E0BFB8] hover:bg-[#D4A5A0] text-black font-semibold rounded transition">
                     Explore Now
                   </button>
-                  <button className="px-8 py-3 bg-[#E0BFB8] hover:bg-[#D4A5A0] text-black font-semibold rounded transition">
+                  <button className="px-8 py-3 border-2 border-[#E0BFB8] hover:bg-[#E0BFB8]/10 text-[#E0BFB8] font-semibold rounded transition">
                     Get Quote
                   </button>
                 </div>
@@ -138,27 +147,56 @@ export default function Home() {
               key={idx}
               onClick={() => setCurrentSlide(idx)}
               className={`w-3 h-3 rounded-full transition ${
-                idx === currentSlide ? "bg-[#E63946]" : "bg-white/50"
+                idx === currentSlide ? "bg-[#E0BFB8]" : "bg-white/50"
               }`}
             />
           ))}
         </div>
       </section>
 
-      {/* Service Categories */}
+      {/* Tilted Portrait Gallery */}
       <section className="bg-background py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-display font-bold text-center mb-16">Our Services</h2>
+          <h2 className="text-4xl font-display font-bold text-center mb-16">Our Venue in Action</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {galleryImages.map((image, idx) => (
+              <div
+                key={idx}
+                className="group perspective"
+                style={{
+                  transform: `rotate(${idx % 2 === 0 ? -3 : 3}deg)`,
+                }}
+              >
+                <div className="relative overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:rotate-0">
+                  <img
+                    src={image}
+                    alt={`Venue setup ${idx + 1}`}
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p className="text-white font-semibold">Venue Setup</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories */}
+      <section className="bg-card py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-display font-bold text-center mb-16">Our Services</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {serviceCategories.map((service, idx) => {
               const Icon = service.icon;
               return (
                 <div
                   key={idx}
-                  className={`bg-gradient-to-br ${service.color} rounded-lg p-8 text-white hover:shadow-2xl transition transform hover:scale-105`}
+                  className={`bg-gradient-to-br ${service.color} rounded-lg p-8 text-black hover:shadow-2xl transition transform hover:scale-105`}
                 >
                   <div className="mb-4">
-                    <Icon color="white" size={48} />
+                    <Icon color="black" size={48} />
                   </div>
                   <h3 className="text-2xl font-display font-bold mb-2">{service.title}</h3>
                   <p className="text-lg opacity-90">{service.description}</p>
@@ -170,16 +208,16 @@ export default function Home() {
       </section>
 
       {/* Product Categories */}
-      <section className="bg-card py-20">
+      <section className="bg-background py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-display font-bold text-center mb-16">Browse Our Inventory</h2>
+          <h2 className="text-4xl font-display font-bold text-center mb-16">Browse Our Inventory</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {productCategories.map((product, idx) => {
               const Icon = product.icon;
               return (
                 <div
                   key={idx}
-                  className="bg-background rounded-lg p-8 text-center hover:border-[#E63946] border-2 border-transparent transition cursor-pointer group"
+                  className="bg-card rounded-lg p-8 text-center hover:border-[#E0BFB8] border-2 border-transparent transition cursor-pointer group"
                 >
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition">
                     <Icon color={product.color} size={56} />
@@ -194,9 +232,9 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-background py-20">
+      <section className="bg-card py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-display font-bold text-center mb-16">How It Works</h2>
+          <h2 className="text-4xl font-display font-bold text-center mb-16">How It Works</h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-5 gap-4 md:gap-2">
               {[
@@ -207,14 +245,11 @@ export default function Home() {
                 { step: 5, title: "Enjoy", desc: "Perfect event!" },
               ].map((item, idx) => (
                 <div key={idx} className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-[#E63946] text-white flex items-center justify-center font-display font-bold text-lg">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-[#E0BFB8] text-black flex items-center justify-center font-display font-bold text-lg">
                     {item.step}
                   </div>
                   <h4 className="font-display font-semibold mb-1">{item.title}</h4>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
-                  {idx < 4 && (
-                    <div className="hidden md:block absolute right-0 top-6 w-8 h-1 bg-gradient-to-r from-[#E63946] to-transparent" />
-                  )}
                 </div>
               ))}
             </div>
@@ -223,13 +258,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-[#E63946] to-[#C63946] py-20">
+      <section className="bg-gradient-to-r from-[#E0BFB8] to-[#D4A5A0] py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-5xl font-display font-bold text-white mb-6">Ready to Plan Your Event?</h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let us help you create an unforgettable celebration with our premium rental services.
+          <h2 className="text-5xl font-display font-bold text-black mb-6">Ready to Plan Your Event?</h2>
+          <p className="text-xl text-black/80 mb-8 max-w-2xl mx-auto">
+            Let us help you create an unforgettable celebration with our premium rental services and beautiful venue.
           </p>
-          <button className="px-10 py-4 bg-white text-[#E63946] font-display font-bold text-lg rounded hover:bg-champagne-cream transition">
+          <button className="px-10 py-4 bg-black text-[#E0BFB8] font-display font-bold text-lg rounded hover:bg-opacity-80 transition">
             Get Your Quote Today
           </button>
         </div>
