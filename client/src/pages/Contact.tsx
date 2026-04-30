@@ -6,7 +6,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative h-96 overflow-hidden">
         <img
-          src="/manus-storage/venue_hero_2_343d8e24.jpeg"
+          src="/images/venue_hero_2.jpeg"
           alt="Contact Us"
           className="w-full h-full object-cover"
         />
@@ -76,7 +76,7 @@ export default function Contact() {
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen=""
+                allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>

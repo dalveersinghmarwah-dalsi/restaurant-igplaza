@@ -6,37 +6,37 @@ const venueImages = [
   {
     title: "Elegant Weddings",
     subtitle: "Your dream day, perfectly styled",
-    image: "/manus-storage/venue_hero_1_fed029b5.png",
+    image: "/images/venue_hero_1.png",
   },
   {
     title: "Garden Celebrations",
     subtitle: "Outdoor elegance and natural beauty",
-    image: "/manus-storage/venue_hero_2_343d8e24.jpeg",
+    image: "/images/venue_hero_2.jpeg",
   },
   {
     title: "Intimate Gatherings",
     subtitle: "Personal touches, lasting memories",
-    image: "/manus-storage/venue_setup_3_71c6a60e.jpeg",
+    image: "/images/venue_setup_3.jpeg",
   },
   {
     title: "Grand Celebrations",
     subtitle: "Spectacular events, unforgettable nights",
-    image: "/manus-storage/venue_setup_4_cc6beed7.jpeg",
+    image: "/images/venue_setup_3.jpeg",
   },
   {
     title: "Luxury Receptions",
     subtitle: "Premium service, exceptional details",
-    image: "/manus-storage/venue_setup_5_eeb36ecb.jpeg",
+    image: "/images/venue_setup_3.jpeg",
   },
 ];
 
 const galleryImages = [
-  "/manus-storage/venue_setup_3_71c6a60e.jpeg",
-  "/manus-storage/venue_setup_4_cc6beed7.jpeg",
-  "/manus-storage/venue_setup_5_eeb36ecb.jpeg",
-  "/manus-storage/venue_setup_6_7a676f6b.jpeg",
-  "/manus-storage/venue_hero_1_fed029b5.png",
-  "/manus-storage/venue_hero_2_343d8e24.jpeg",
+  "/images/venue_setup_3.jpeg",
+  "/images/venue_setup_4.jpeg",
+  "/images/venue_setup_5.jpeg",
+  "/images/venue_setup_6.jpeg",
+  "/images/venue_hero_1.png",
+  "/images/venue_hero_2.jpeg",
 ];
 
 const serviceCategories = [

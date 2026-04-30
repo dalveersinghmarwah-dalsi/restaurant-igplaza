@@ -57,7 +57,7 @@ export default function PartyThemes() {
           <h2 className="text-4xl font-display font-bold mb-8 text-center">Venue Showcase</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <img
-              src="/manus-storage/venue_hero_2_343d8e24.jpeg"
+              src="/images/venue_hero_2.jpeg"
               alt="Venue 1"
               className="rounded-lg shadow-lg h-96 object-cover"
             />
