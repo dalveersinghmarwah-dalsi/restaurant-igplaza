@@ -36,7 +36,7 @@ export default function HireProducts() {
 
   return (
     <div className="min-h-screen">
-      <section className="section-container bg-card">
+      <section className="bg-gradient-to-r from-[#E63946] to-[#C63946] py-20">
         <div className="container mx-auto px-4 max-w-3xl">
           <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">Hire Products</h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
@@ -45,7 +45,7 @@ export default function HireProducts() {
         </div>
       </section>
 
-      <section className="section-container bg-background">
+      <section className="bg-background py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-display font-bold mb-16 text-center">Product Categories</h2>
           
@@ -68,7 +68,7 @@ export default function HireProducts() {
         </div>
       </section>
 
-      <section className="section-container bg-card">
+      <section className="bg-gradient-to-r from-[#E63946] to-[#C63946] py-20">
         <div className="container mx-auto px-4 text-center max-w-2xl">
           <h2 className="text-4xl font-display font-bold mb-6">Ready to Rent?</h2>
           <p className="text-lg text-muted-foreground mb-8">
